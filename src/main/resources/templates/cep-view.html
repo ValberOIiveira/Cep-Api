@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Consulta de CEP</title>
+</head>
+
+
+<!-- display flex transforma o body num container
+align items alinha os itens verticalmente
+justify-content-center alinha os itens horizontalmente
+vh 100 define uma altura -->
+
+<body class="d-flex align-items-center justify-content-center vh-100 ">
+    <div class="text-center">
+        <div class="border border-5  p-4 text-center ">
+            <h2>Dados do CEP</h2>
+            <p>CEP: <span th:text="${cepData.cep}"></span></p>
+            <p>Logradouro: <span th:text="${cepData.logradouro}"></span></p>
+            <p>Complemento: <span th:text="${cepData.complemento}"></span></p>
+            <p>Bairro: <span th:text="${cepData.bairro}"></span></p>
+            <p>Localidade: <span th:text="${cepData.localidade}"></span></p>
+            <p>UF: <span th:text="${cepData.uf}"></span></p>
+            <p>IBGE: <span th:text="${cepData.ibge}"></span></p>
+            <p>GIA: <span th:text="${cepData.gia}"></span></p>
+            <p>DDD: <span th:text="${cepData.ddd}"></span></p>
+            <p>SIAFI: <span th:text="${cepData.siafi}"></span></p>
+        </div>
+    </div>
+</body>
+
+</html>
